@@ -1,4 +1,13 @@
 
+def __remove_duplicate_lists(input_list: list) -> list:
+    unique_lists = []
+    for sublist in input_list:
+        sorted_sublist = sorted(sublist)
+        if sorted_sublist not in unique_lists:
+            unique_lists.append(sorted_sublist)
+    return unique_lists
+
+
 def __index_increase(index_list: list) -> list:
     return [[(x + 1, y + 1) for x, y in inner_list] for inner_list in index_list]
 
@@ -52,7 +61,7 @@ def __solve(matrix: list, word: str) -> list:
                [matrix[i+k][j-k] for k in range(len(word))][::-1] == list(word):
                 word_indices.append([(i+k, j-k) for k in range(len(word))])
 
-    return word_indices
+    return __remove_duplicate_lists(word_indices)
 
 
 def solver(board: list, words: list) -> dict:
