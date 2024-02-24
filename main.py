@@ -1,6 +1,6 @@
 import os
 from game import solver
-from arrange_puzzels import get_input_path, create_puzzle_solution
+from arrange_puzzles import get_input_path, create_puzzle_solution
 
 
 def get_board(board_text_file_path: str) -> list:
