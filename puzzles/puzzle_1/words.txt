@@ -1,0 +1,36 @@
+backpack
+bell
+books
+chalk
+chorus
+class
+classroom
+clubs
+coach
+computer
+crayons
+desk
+detention
+drama
+english
+eraser
+field trip
+friends
+geography
+glue
+grade
+hall pass
+history
+homeroom
+homework
+laboratory
+library
+locker
+lunch box
+maths
+morning
+music
+notebook
+office
+paints
+principal
