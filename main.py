@@ -4,6 +4,13 @@ from arrange_puzzles import get_input_path, create_puzzle_solution
 
 
 def get_board(board_text_file_path: str) -> list:
+    """
+    This function reads a text file from the provided path and returns a list of lines in the file.
+
+    :param board_text_file_path: A string representing the path to the text file.
+
+    :return: A list of strings where each string is a line from the text file.
+    """
     with open(board_text_file_path, 'r') as f:
         file = f.read()
     lines = file.split('\n')
@@ -11,6 +18,13 @@ def get_board(board_text_file_path: str) -> list:
 
 
 def get_words(words_file_path: str) -> list:
+    """
+    This function reads a text file from the provided path and returns a list of lines in the file.
+
+    :param words_file_path: A string representing the path to the text file.
+
+    :return: A list of strings where each string is a line from the text file.
+    """
     with open(words_file_path, 'r') as f:
         file = f.read()
     lines = file.split('\n')

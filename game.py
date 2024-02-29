@@ -1,5 +1,9 @@
 
 def __remove_duplicate_lists(input_list: list) -> list:
+    """
+    This function takes a list of lists as input, sorts each sublist, and removes any duplicates.
+    It returns a list of the unique sorted sublists.
+    """
     unique_lists = []
     for sublist in input_list:
         sorted_sublist = sorted(sublist)
@@ -9,10 +13,20 @@ def __remove_duplicate_lists(input_list: list) -> list:
 
 
 def __index_increase(index_list: list) -> list:
+    """
+    This function takes a list of lists as input, where each inner list contains tuples of two integers.
+    It increases each integer in each tuple by 1.
+    It returns a list of lists with the updated tuples.
+    """
     return [[(x + 1, y + 1) for x, y in inner_list] for inner_list in index_list]
 
 
 def __solve(matrix: list, word: str) -> list:
+    """
+    This function takes a 2D list (matrix) and a string (word) as input.
+    It searches for the word in the matrix horizontally, vertically, and diagonally (both forward and backward).
+    It returns a list of lists, where each inner list contains the indices of the letters of the word in the matrix.
+    """
     word_indices = []
     rows, cols = len(matrix), len(matrix[0])
 
@@ -65,6 +79,11 @@ def __solve(matrix: list, word: str) -> list:
 
 
 def solver(board: list, words: list) -> dict:
+    """
+    This function takes a 2D list (board) and a list of strings (words) as input.
+    It finds the indices of each word in the board using the __solve function and increases each index by 1 using the __index_increase function.
+    It returns a dictionary where the keys are the words and the values are the lists of indices.
+    """
     ordered_indices = {}
     for word in words:
         solution = __index_increase(__solve(board, word.upper()))
